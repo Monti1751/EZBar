@@ -5,7 +5,9 @@ public class Categoria_Productos {
 	private boolean activa;
 	
 	public Categoria_Productos (String categoria_id, String nombre, boolean activa) {
-		
+		this.activa = activa;
+		this.categoria_id = categoria_id;
+		this.nombre = nombre;
 	}
 	
 	public String getCategoria_id() {
