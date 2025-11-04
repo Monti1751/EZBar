@@ -1,0 +1,7 @@
+package EstructuraBD;
+
+public class Mesas {
+	private String mesa_id, ubicacion, estado;
+	private short numero_mesa, capacidad;
+	private boolean activa;
+}
