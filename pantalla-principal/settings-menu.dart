@@ -28,18 +28,8 @@ class SettingsMenu extends StatelessWidget {
               child: ListView(
                 children: [
                   _menuItem(
-                    icon: Icons.restaurant_menu,
-                    text: "Administrar menú",
-                    onTap: () {},
-                  ),
-                  _menuItem(
                     icon: Icons.person_pin,
                     text: "Administrar roles",
-                    onTap: () {},
-                  ),
-                  _menuItem(
-                    icon: Icons.table_bar,
-                    text: "Administrar mesas",
                     onTap: () {},
                   ),
                   _menuItem(
@@ -62,10 +52,6 @@ class SettingsMenu extends StatelessWidget {
                     text: "Editar inventario",
                     onTap: () {},
                   ),
-
-                  // ---------------------------------------------------------
-                  // Nueva sección: Ajustes visuales
-                  // ---------------------------------------------------------
                   _menuItem(
                     icon: Icons.brush,
                     text: "Ajustes visuales",
@@ -76,11 +62,33 @@ class SettingsMenu extends StatelessWidget {
                 ],
               ),
             ),
+             Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.logout, color: Color(0xFFC63425)),
+                  label: const Text(
+                    "Cerrar sesión",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFC63425),
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
     );
+
   }
+  
 
   // Constructor de ítems del menú
   Widget _menuItem({
@@ -96,4 +104,3 @@ class SettingsMenu extends StatelessWidget {
     );
   }
 }
-
